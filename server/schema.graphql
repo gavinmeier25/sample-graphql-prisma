@@ -1,5 +1,5 @@
 type Query {
-    publisthedPosts: [Post!]!
+    publishedPosts: [Post!]!
     post(postId: ID!): Post
     postsByUser(userId: ID!): [Post!]!
 }
@@ -7,7 +7,7 @@ type Query {
 type Mutation {
     createUser(name: String!): User
     createDraft(title: String!, userId: ID!): Post
-    publish(postId: ID!): Post
+    publish(postIds: ID!): Post
 }
 
 type User {
